@@ -1,0 +1,35 @@
+
+
+import java.util.*;
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
+import java.io.*;
+public class Question {
+    int points;
+    int diff;
+    int answerSpace;
+    final int max = 10;
+     final int min = 1;
+    String questionText;
+    String questionType;
+    String questionheader;
+    String questionSpace;
+Public quesitons (String questionText, int points, int diff, int answerSpace){
+    if( diff < min || diff > max) {
+    throw new IllegalArgumentException(" error ");
+    }
+    if(questionText.length() <= 0) {
+    throw new IllegalArgumentException("error");
+    }
+    if (answerSpace<0) {
+        throw new IllegalArgumentException(" error")
+;
+    }
+this.points = points;
+this.diff= diff;
+this.answerSpace = answerSpace;
+this.questionText= questionText;
+this.questionheader= "["+ points + "| "diff "+ diff + ]\n";
+this.questionSpace = "\n".repeat(answerSpace);
+this.questionType= "(question)";
+}
+}
